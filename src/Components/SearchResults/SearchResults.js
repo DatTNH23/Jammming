@@ -1,13 +1,14 @@
 import React from 'react'
 import './SearchResults.css'
-// import '../TrackList/TrackList'
+import TrackList from '../TrackList/TrackList'
 
 class SearchResult extends React.Component {
     render() {
         return (
             <div className="SearchResults">
                 <h2>Results</h2>
-                {/* <TrackList /> */}
+                <TrackList onAdd={this.props.onAdd}
+                    isRemoval={false} tracks={this.props.searchResults} />
             </div>
         )
     }
